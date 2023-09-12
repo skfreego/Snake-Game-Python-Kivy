@@ -22,19 +22,17 @@ jobs:
           sudo dpkg --add-architecture i386  # Enable 32-bit support
           sudo apt-get update
           sudo apt-get install -y build-essential ccache openjdk-8-jdk zlib1g-dev libncurses5:i386 libstdc++6:i386 zlib1g:i386
-
+          
       - name: Install Python
         run: |
           sudo apt-get update
           sudo apt-get install -y python3-venv  # Install Python virtual environment tools
           sudo apt-get install -y python3-pip  # Install pip for Python 3
-
-          # Install the latest version of Python (replace <latest_version> with the actual version)
           sudo apt-get install -y python3.<latest_version>
-
-          # Upgrade pip to the latest version
-          python3 -m pip install --upgrade pip
           
+      - name: Upgrade pip
+        run: python3 -m pip install --upgrade pip
+       
       - name: Install cython
         run: |
           sudo apt-get install -y python3-pip
