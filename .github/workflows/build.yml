@@ -30,7 +30,7 @@ jobs:
 
       - name: Install jnius
         run: |
-          pip3 install git+https://github.com/kivy/pyjnius.git
+          pip3 install jnius
 
       - name: Get Date
         id: get-date
