@@ -26,9 +26,7 @@ jobs:
       - name: Install Python
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-venv  # Install Python virtual environment tools
-          sudo apt-get install -y python3-pip  # Install pip for Python 3
-          sudo apt-get install -y python3.<latest_version>
+          sudo apt-get install -y python3-venv  # Install Python virtual environment tools       
           
       - name: Upgrade pip
         run: python3 -m pip install --upgrade pip
